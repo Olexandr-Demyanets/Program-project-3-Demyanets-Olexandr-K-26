@@ -65,11 +65,13 @@ build\prog.exe > results.txt
 | T3 | a5, b5-b6, e3, g3-g4, d1-d4, e9, i5-i7, h7-h8, k3 | 17 |
 | T4 | b1-b4, g5-g6, d5-d8, h1-h6, k4 | 17 |
 
-Діаграма розподілу і точок синхронізації: [diagram.png](diagram.png) / [diagram.svg](diagram.svg).
+Діаграма розподілу і точок синхронізації: [docs/diagram.png](docs/diagram.png) / [docs/diagram.svg](docs/diagram.svg).
+Звіт: [docs/report.md](docs/report.md).
 
 ## Файли
 
 - `src/main.cpp` - програма;
 - `CMakeLists.txt` - збирання;
 - `results.txt` - вивід програми;
-- `diagram.png`, `diagram.svg` - діаграма розподілу обчислень.
+- `docs/diagram.png`, `docs/diagram.svg` - діаграма розподілу обчислень;
+- `docs/report.md` - звіт.

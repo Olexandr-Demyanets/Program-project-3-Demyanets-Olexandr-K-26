@@ -131,7 +131,7 @@ static_assert(each_action_exactly_once(), "розподіл дій по пото
 void f(char x, int i)
 {
     std::this_thread::sleep_for(std::chrono::seconds(1));
-    std::osyncstream(std::cout) << "З набору " << x << " виконано дію " << i << ".\n";
+    std::osyncstream(std::cout) << "З набору " << x << " виконано дію " << i << "." << std::endl;
 }
 
 void worker(std::span<const Block> plan)
@@ -157,7 +157,7 @@ int main()
     SetConsoleOutputCP(CP_UTF8);
 #endif
 
-    std::osyncstream(std::cout) << "Обчислення розпочато.\n";
+    std::osyncstream(std::cout) << "Обчислення розпочато." << std::endl;
     const auto started = std::chrono::steady_clock::now();
     {
         std::jthread workers[nt];
@@ -167,7 +167,7 @@ int main()
     const std::chrono::duration<double> elapsed = std::chrono::steady_clock::now() - started;
 
     std::osyncstream(std::cout) << "Обчислення завершено. Тривалість обчислення " << std::fixed
-                                << std::setprecision(3) << elapsed.count() << " секунд.\n";
+                                << std::setprecision(3) << elapsed.count() << " секунд." << std::endl;
 
 #ifdef _WIN32
     SetConsoleOutputCP(previous_cp);
